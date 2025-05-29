@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+E-commerce Jewelry Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Description
+The E-commerce Jewelry Store is a web application designed to showcase and sell a variety of jewelry items, including earrings, rings, bracelets, and necklaces. Built with React and `react-router-dom`, this app provides an intuitive interface for users to browse products, filter by category, search by name, sort by various criteria, and manage their shopping cart. The application tracks product views and purchases, displays these metrics on product pages, and highlights new arrivals with a badge for items with fewer than 10 views. Cart items persist across sessions using localStorage, ensuring a seamless shopping experience.
 
-## Available Scripts
+Setup Instructions
+To run this project locally, follow these steps:
 
-In the project directory, you can run:
+1. Clone the Repository
+   - Clone the repository to your local machine using:
+     git clone <repository-url>
+   - Replace <repository-url> with the URL of your GitHub repository.
 
-### `npm start`
+2. Install Dependencies
+   - Navigate to the project directory:
+     cd e-commerce-jewelry-store
+   - Install the required Node.js packages:
+     npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Set Up Environment Variables
+   - Ensure you have a .env file in the root directory with necessary configurations (e.g., API keys if applicable). A sample .env file can be created based on any provided documentation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Run the Application
+   - Start the development server:
+     npm start
+   - The app should open automatically in your default browser at http://localhost:3000. If not, manually navigate to that URL.
 
-### `npm test`
+5. Build for Production (Optional)
+   - To create a production build:
+     npm run build
+   - This generates a build folder with optimized static files.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Features Implemented
 
-### `npm run build`
+Required Features
+- Product Browsing: Display a grid of products filtered by category (e.g., earrings, rings, bracelets, necklaces).
+- Dynamic Routing: Set up dynamic routes using react-router-dom (e.g., /product/:id for product details).
+- Product Details Page:
+  - Larger product image, product name, price (with DZD (₫) currency symbol), views count, number of times sold, customer reviews section with star ratings and comments, and an "Add to Cart" button.
+  - Automatically increments the views count each time the product page is viewed.
+- Shopping Cart Implementation:
+  - View added items in the cart.
+  - Adjust quantities (increase/decrease) for each item.
+  - Remove items from the cart.
+  - Display the total cart value in DZD (₫).
+  - Navbar includes a cart icon showing the number of items in the cart.
+  - Uses React state management (useState) to handle cart operations.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Bonus Features
+- Search Bar: Allow users to filter products by name.
+- "New Arrival" Badge: Show a badge on products with fewer than 10 views.
+- Persistent Cart: Save cart items in localStorage to persist across page reloads.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Additional Features
+- Sorting Options: Enable sorting of products by name, popularity (based on views), and price.
+- View and Purchase Counters: Track and display the number of times a product is viewed and purchased on its detailed page.
+- Responsive Design: Utilize a grid layout for product display with a clean, user-friendly interface.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Notes
+- Ensure all image assets (e.g., product_1.png to product_40.png, star_icon.png, star_dull_icon.png, dropdown_icon.png) are placed in the src/Components/Assets directory.
+- The project requires react-router-dom for navigation and routing.
+- For production deployment, configure a web server to serve the build folder.
