@@ -1,0 +1,75 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 100%;
+  max-width: 100%;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.item:hover {
+  transform: scale(1.03);
+}
+
+.item-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 240px;
+}
+
+.item img {
+  width: 100%;
+  max-width: 240px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.new-arrival-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #8b0000;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  z-index: 1;
+}
+
+.item p {
+  margin: 6px 0;
+  font-size: 17px;
+  font-weight: 500;
+  color: #333;
+  min-height: 40px;
+}
+
+.item-prices {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.item-prices-new {
+  color: #374151;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.item-price-old {
+  color: #8c8c8c;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: line-through;
+}
